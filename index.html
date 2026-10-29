@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas de Muestra | Portfolio Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Web<strong>Samples</strong></span>
+            </div>
+            <p class="tagline">Páginas de muestra listas para personalizar</p>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                <span class="line1">Elegí tu</span>
+                <span class="line2">Página Web</span>
+                <span class="line3">Ideal</span>
+            </h1>
+            <p class="hero-subtitle">4 diseños profesionales listos para copiar, pegar y personalizar según las necesidades de tu cliente</p>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Páginas -->
+    <section class="pages-section" id="paginas">
+        <div class="container">
+            <h2 class="section-title">Nuestras Plantillas</h2>
+            <p class="section-subtitle">Cada página está en su propia carpeta, lista para ser copiada como proyecto independiente</p>
+            
+            <div class="pages-grid">
+                <!-- Gimnasio -->
+                <div class="page-card" data-category="fitness">
+                    <div class="card-icon gym-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="card-badge">Landing Page</div>
+                    <h3>Power Fitness</h3>
+                    <p class="card-description">Página promocional para gimnasio con planes de suscripción, horarios, equipo de entrenadores y formulario de contacto.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Hero con call-to-action</li>
+                        <li><i class="fas fa-check"></i> Planes y precios</li>
+                        <li><i class="fas fa-check"></i> Tabla de horarios</li>
+                        <li><i class="fas fa-check"></i> Formulario de contacto</li>
+                        <li><i class="fas fa-check"></i> 100% Responsive</li>
+                    </ul>
+                    <div class="card-folder">
+                        <i class="fas fa-folder"></i> /gimnasio/
+                    </div>
+                    <a href="gimnasio/index.html" class="card-button gym-button">
+                        <span>Ver Página</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Restaurante -->
+                <div class="page-card" data-category="food">
+                    <div class="card-icon restaurant-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="card-badge">Menú Digital</div>
+                    <h3>La Parrilla de Don Julio</h3>
+                    <p class="card-description">Menú digital elegante para restaurante con carta organizada por categorías, especialidades y sistema de reservas.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Carta completa con precios</li>
+                        <li><i class="fas fa-check"></i> Especialidades destacadas</li>
+                        <li><i class="fas fa-check"></i> Sistema de reservas</li>
+                        <li><i class="fas fa-check"></i> Horarios de atención</li>
+                        <li><i class="fas fa-check"></i> 100% Responsive</li>
+                    </ul>
+                    <div class="card-folder">
+                        <i class="fas fa-folder"></i> /restaurante/
+                    </div>
+                    <a href="restaurante/index.html" class="card-button restaurant-button">
+                        <span>Ver Página</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Vivero -->
+                <div class="page-card" data-category="ecommerce">
+                    <div class="card-icon nursery-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="card-badge badge-special">E-Commerce + MercadoPago</div>
+                    <h3>Verde Vida Vivero</h3>
+                    <p class="card-description">Tienda online para vivero con catálogo de plantas, carrito de compras y integración con Mercado Pago.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Catálogo de 12+ productos</li>
+                        <li><i class="fas fa-check"></i> Carrito de compras</li>
+                        <li><i class="fas fa-check"></i> Filtro por categorías</li>
+                        <li><i class="fas fa-star" style="color: #FFD700;"></i> <strong>API Mercado Pago</strong></li>
+                        <li><i class="fas fa-check"></i> 100% Responsive</li>
+                    </ul>
+                    <div class="card-folder">
+                        <i class="fas fa-folder"></i> /vivero/
+                    </div>
+                    <a href="vivero/index.html" class="card-button nursery-button">
+                        <span>Ver Página</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Ropa -->
+                <div class="page-card" data-category="ecommerce">
+                    <div class="card-icon clothing-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="card-badge badge-special">E-Commerce + MercadoPago</div>
+                    <h3>Urban Style</h3>
+                    <p class="card-description">Tienda de moda online con catálogo por género, selector de talles, carrito e integración con Mercado Pago.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Catálogo Mujer/Hombre</li>
+                        <li><i class="fas fa-check"></i> Selector de talles</li>
+                        <li><i class="fas fa-check"></i> Carrito de compras</li>
+                        <li><i class="fas fa-star" style="color: #FFD700;"></i> <strong>API Mercado Pago</strong></li>
+                        <li><i class="fas fa-check"></i> 100% Responsive</li>
+                    </ul>
+                    <div class="card-folder">
+                        <i class="fas fa-folder"></i> /ropa/
+                    </div>
+                    <a href="ropa/index.html" class="card-button clothing-button">
+                        <span>Ver Página</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2 class="section-title">¿Cómo usar estas plantillas?</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Elegí la plantilla</h3>
+                    <p>Revisá las 4 opciones y elegí la que mejor se adapte al negocio de tu cliente.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Copiá la carpeta</h3>
+                    <p>Cada página está en su propia carpeta independiente. Copiala a tu proyecto.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Personalizá</h3>
+                    <p>Modificá textos, colores, imágenes y contenido según las necesidades del cliente.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Publicá</h3>
+                    <p>Subí la página a un hosting y ¡listo! Tu cliente ya tiene su sitio web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span>Web<strong>Samples</strong></span>
+                </div>
+                <p>Páginas de muestra para desarrollo web freelance</p>
+                <div class="footer-tech">
+                    <span><i class="fab fa-html5"></i> HTML5</span>
+                    <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span><i class="fab fa-js"></i> JavaScript</span>
+                    <span><i class="fas fa-mobile-alt"></i> Responsive</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 - Páginas de Muestra. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Crear partículas de fondo
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particle.style.width = particle.style.height = (Math.random() * 4 + 2) + 'px';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Animación de entrada de las cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 150);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.page-card, .step').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelector('.scroll-indicator').addEventListener('click', () => {
+            document.getElementById('paginas').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

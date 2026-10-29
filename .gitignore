@@ -1,0 +1,17 @@
+# Logs y temporales del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores y entornos
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de entorno y credenciales (por si se agrega backend en el futuro)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

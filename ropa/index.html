@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="URBAN STYLE - Tienda de ropa urbana y accesorios. Moda con actitud. Buenos Aires, Argentina.">
+  <title>URBAN STYLE | Moda Urbana - Buenos Aires</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖤</text></svg>">
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <span><i class="fa-solid fa-truck-fast"></i> &nbsp; Envío gratis en compras mayores a $50.000 &nbsp; | &nbsp; 3 cuotas sin interés</span>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">URBAN<span>STYLE</span></a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Mujer</a>
+        <a href="#catalogo">Hombre</a>
+        <a href="#catalogo">Accesorios</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div class="cart-icon-wrapper" id="cart-icon" title="Ver carrito">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge hidden" id="cart-badge">0</span>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="hero-subtitle">Nueva Colección 2025</p>
+      <h1 class="hero-title">
+        URBAN<br>
+        <span>STYLE</span>
+      </h1>
+      <p class="hero-desc">
+        Moda urbana con actitud. Descubrí las últimas tendencias 
+        en ropa y accesorios para quienes marcan su propio estilo.
+      </p>
+      <div class="hero-buttons">
+        <a href="#catalogo" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-right"></i> Ver Catálogo
+        </a>
+        <a href="#ofertas" class="btn btn-outline">
+          <i class="fa-solid fa-tags"></i> Ofertas
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BANNER NOVEDADES ==================== -->
+  <section class="new-arrivals-banner">
+    <span class="banner-tag"><i class="fa-solid fa-sparkles"></i> Recién Llegados</span>
+    <h2>Nueva Temporada Otoño/Invierno</h2>
+    <p>
+      Descubrí las prendas que van a marcar tendencia esta temporada. 
+      Materiales premium, diseños exclusivos.
+    </p>
+    <a href="#catalogo" class="btn btn-primary">
+      <i class="fa-solid fa-fire"></i> Explorar Novedades
+    </a>
+  </section>
+
+  <!-- ==================== CATÁLOGO ==================== -->
+  <section class="section" id="catalogo">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nuestro Catálogo</h2>
+        <p>Explorá nuestra colección completa de ropa y accesorios urbanos</p>
+      </div>
+
+      <!-- Filtros de categoría -->
+      <div class="category-filters">
+        <button class="filter-btn active" data-categoria="todos" onclick="filtrarProductos('todos')">
+          <i class="fa-solid fa-grid-2"></i> Todos
+        </button>
+        <button class="filter-btn" data-categoria="mujer" onclick="filtrarProductos('mujer')">
+          <i class="fa-solid fa-person-dress"></i> Mujer
+        </button>
+        <button class="filter-btn" data-categoria="hombre" onclick="filtrarProductos('hombre')">
+          <i class="fa-solid fa-person"></i> Hombre
+        </button>
+        <button class="filter-btn" data-categoria="accesorios" onclick="filtrarProductos('accesorios')">
+          <i class="fa-solid fa-gem"></i> Accesorios
+        </button>
+      </div>
+
+      <!-- Grilla de productos (se genera con JS) -->
+      <div class="products-grid" id="products-grid">
+        <!-- Los productos se insertan dinámicamente -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OFERTAS ==================== -->
+  <section class="ofertas-section" id="ofertas">
+    <div class="section-header">
+      <span class="banner-tag" style="margin-bottom: 1.5rem; display: inline-block;">
+        <i class="fa-solid fa-bolt"></i> Ofertas Especiales
+      </span>
+      <h2>Sale de Temporada</h2>
+      <p>¡No te pierdas estos descuentos exclusivos! Stock limitado.</p>
+    </div>
+    
+    <div class="ofertas-grid" id="ofertas-grid">
+      <!-- Las ofertas se insertan dinámicamente -->
+    </div>
+  </section>
+
+  <!-- ==================== GUÍA DE TALLES ==================== -->
+  <section class="size-guide-section" id="guia-talles">
+    <div class="section-header">
+      <h2>Guía de Talles</h2>
+      <p>Encontrá tu talle perfecto con nuestra tabla de medidas</p>
+    </div>
+    <div class="size-guide-container">
+      <div class="size-table-wrapper">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Talle</th>
+              <th>Pecho (cm)</th>
+              <th>Cintura (cm)</th>
+              <th>Cadera (cm)</th>
+              <th>Largo (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>S</strong></td>
+              <td>86 - 90</td>
+              <td>68 - 72</td>
+              <td>90 - 94</td>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td><strong>M</strong></td>
+              <td>91 - 96</td>
+              <td>73 - 78</td>
+              <td>95 - 100</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <td><strong>L</strong></td>
+              <td>97 - 102</td>
+              <td>79 - 84</td>
+              <td>101 - 106</td>
+              <td>69</td>
+            </tr>
+            <tr>
+              <td><strong>XL</strong></td>
+              <td>103 - 110</td>
+              <td>85 - 92</td>
+              <td>107 - 114</td>
+              <td>72</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align: center; margin-top: 1.5rem; color: #999; font-size: 0.85rem;">
+        <i class="fa-solid fa-ruler"></i> &nbsp;
+        Las medidas son aproximadas y pueden variar según el modelo. 
+        Si tenés dudas, <a href="#contacto" style="color: #B76E79;">contactanos</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER ==================== -->
+  <section class="newsletter-section" id="newsletter">
+    <h2>Suscribite a Nuestro Newsletter</h2>
+    <p>Recibí novedades, descuentos exclusivos y adelantos de nuevas colecciones directo en tu correo.</p>
+    <form class="newsletter-form" id="newsletter-form">
+      <input type="email" placeholder="Tu email..." required>
+      <button type="submit" class="btn btn-dark">
+        <i class="fa-solid fa-paper-plane"></i> Suscribirme
+      </button>
+    </form>
+  </section>
+
+  <!-- ==================== INSTAGRAM FEED ==================== -->
+  <section class="instagram-section" id="instagram">
+    <div class="section-header">
+      <h2>Seguinos en Instagram</h2>
+      <p>Inspirate con los looks de nuestra comunidad</p>
+    </div>
+    <div class="instagram-grid">
+      <div class="insta-item">
+        <div class="insta-placeholder" style="background: linear-gradient(135deg, #B76E79, #d4a0a7);">
+          <i class="fa-solid fa-shirt"></i>
+        </div>
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <div class="insta-placeholder" style="background: linear-gradient(135deg, #2d2d2d, #4a4a4a);">
+          <i class="fa-solid fa-person-dress"></i>
+        </div>
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <div class="insta-placeholder" style="background: linear-gradient(135deg, #8f545d, #B76E79);">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <div class="insta-placeholder" style="background: linear-gradient(135deg, #1a1a1a, #3d3d3d);">
+          <i class="fa-solid fa-vest"></i>
+        </div>
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <div class="insta-placeholder" style="background: linear-gradient(135deg, #c4a882, #e0cbb0);">
+          <i class="fa-solid fa-hat-cowboy"></i>
+        </div>
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <div class="insta-placeholder" style="background: linear-gradient(135deg, #4a5a3a, #6b7a5a);">
+          <i class="fa-solid fa-person"></i>
+        </div>
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+    </div>
+    <p class="insta-handle">
+      <a href="https://instagram.com/urbanstyle.ba" target="_blank">
+        <i class="fa-brands fa-instagram"></i> @urbanstyle.ba
+      </a>
+    </p>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section class="contact-section" id="contacto">
+    <div class="section-header">
+      <h2>Contactanos</h2>
+      <p>Estamos para ayudarte. ¡Escribinos!</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Visitanos</h3>
+        <p>
+          Av. Santa Fe 1234, Piso 2<br>
+          Palermo, Buenos Aires<br>
+          CP 1425
+        </p>
+      </div>
+      <div class="contact-info-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Llamanos</h3>
+        <p>
+          <a href="tel:+5491123456789">+54 9 11 2345-6789</a><br>
+          Lunes a Viernes: 10 a 19hs<br>
+          Sábados: 10 a 14hs
+        </p>
+      </div>
+      <div class="contact-info-card">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p>
+          <a href="https://wa.me/5491123456789?text=Hola!%20Quiero%20consultar%20sobre..." target="_blank">
+            +54 9 11 2345-6789
+          </a><br>
+          Respuesta inmediata<br>
+          ¡Consultá sin compromiso!
+        </p>
+      </div>
+      <div class="contact-info-card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:hola@urbanstyle.com.ar">hola@urbanstyle.com.ar</a><br>
+          <a href="mailto:ventas@urbanstyle.com.ar">ventas@urbanstyle.com.ar</a><br>
+          Te respondemos en 24hs
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Urban Style</h4>
+        <p>
+          Moda urbana con actitud desde Buenos Aires. 
+          Creamos prendas para quienes se animan a ser diferentes.
+        </p>
+        <div class="footer-social">
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Tienda</h4>
+        <a class="footer-link" href="#catalogo">Mujer</a>
+        <a class="footer-link" href="#catalogo">Hombre</a>
+        <a class="footer-link" href="#catalogo">Accesorios</a>
+        <a class="footer-link" href="#ofertas">Ofertas</a>
+        <a class="footer-link" href="#guia-talles">Guía de Talles</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <a class="footer-link" href="#">Preguntas Frecuentes</a>
+        <a class="footer-link" href="#">Envíos y Devoluciones</a>
+        <a class="footer-link" href="#">Política de Cambio</a>
+        <a class="footer-link" href="#">Términos y Condiciones</a>
+        <a class="footer-link" href="#">Política de Privacidad</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Av. Santa Fe 1234, CABA</p>
+        <p><i class="fa-solid fa-phone"></i> +54 9 11 2345-6789</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +54 9 11 2345-6789</p>
+        <p><i class="fa-solid fa-envelope"></i> hola@urbanstyle.com.ar</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 URBAN STYLE. Todos los derechos reservados. Buenos Aires, Argentina.</p>
+      <div class="footer-payments">
+        <i class="fa-brands fa-cc-visa" title="Visa"></i>
+        <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+        <i class="fa-brands fa-cc-amex" title="American Express"></i>
+        <i class="fa-solid fa-money-bill-wave" title="Efectivo"></i>
+        <i class="fa-solid fa-building-columns" title="Transferencia"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CARRITO SIDEBAR ==================== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> &nbsp;Tu Carrito</h3>
+      <button class="cart-close" id="cart-close" title="Cerrar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Items del carrito se renderizan con JS -->
+      <div class="cart-empty">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <p>Tu carrito está vacío</p>
+        <p style="font-size: 0.8rem; margin-top: 8px;">¡Explorá nuestra colección!</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal">$0</span>
+      </div>
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-amount" id="cart-total">$0</span>
+      </div>
+      <div class="cart-actions">
+        <button class="btn-checkout" id="btn-checkout">
+          <i class="fa-solid fa-lock"></i> Pagar con Mercado Pago
+        </button>
+        <button class="btn-clear-cart" id="btn-clear-cart">
+          <i class="fa-solid fa-trash"></i> Vaciar Carrito
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <p>Producto agregado al carrito</p>
+  </div>
+
+  <!-- ==================== SCROLL TO TOP ==================== -->
+  <button class="scroll-top" title="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- SDK de Mercado Pago (necesario para pagos reales) -->
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  
+  <!-- Sistema de carrito y Mercado Pago -->
+  <script src="js/mercadopago.js"></script>
+
+</body>
+</html>

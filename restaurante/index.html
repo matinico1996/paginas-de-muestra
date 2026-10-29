@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Parrilla de Don Julio — Restaurante de carnes a la parrilla, pastas caseras y cocina argentina de autor en Buenos Aires.">
+  <title>La Parrilla de Don Julio | Restaurante Argentino</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================
+       NAVEGACIÓN
+       ============================ -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="navbar__logo">DON JULIO</a>
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="#inicio" class="active">Inicio</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#reservas">Reservas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============================
+       HERO
+       ============================ -->
+  <header class="hero" id="inicio">
+    <div class="hero__content">
+      <span class="hero__badge"><i class="fas fa-fire"></i> &nbsp;Desde 1986</span>
+      <h1 class="hero__title">La Parrilla de<span>Don Julio</span></h1>
+      <p class="hero__tagline">El auténtico sabor de la carne argentina, a las brasas como manda la tradición.</p>
+      <div class="divider"><span></span><i class="fas fa-utensils"></i><span></span></div>
+      <a href="#carta" class="hero__cta">Ver nuestra carta</a>
+    </div>
+  </header>
+
+  <!-- ============================
+       CARTA / MENÚ
+       ============================ -->
+  <section id="carta">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Nuestra Carta</h2>
+        <div class="divider"><span></span><i class="fas fa-leaf"></i><span></span></div>
+        <p>Ingredientes de primera, preparados con pasión criolla</p>
+      </div>
+
+      <!-- Filtros de categoría -->
+      <div class="menu-categories reveal">
+        <button class="active" data-category="all">Todas</button>
+        <button data-category="entradas">Entradas</button>
+        <button data-category="carnes">Carnes</button>
+        <button data-category="pastas">Pastas</button>
+        <button data-category="postres">Postres</button>
+        <button data-category="bebidas">Bebidas</button>
+      </div>
+
+      <!-- Grilla de ítems -->
+      <div class="menu-grid" id="menuGrid">
+
+        <!-- ─── ENTRADAS ─── -->
+        <div class="menu-item reveal" data-category="entradas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Empanadas Criollas (x3)</h3>
+            <p class="menu-item__desc">Carne cortada a cuchillo, cebolla, huevo y aceitunas. Horneadas.</p>
+          </div>
+          <span class="menu-item__price">$ 4.500</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="entradas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Provoleta a la Parrilla</h3>
+            <p class="menu-item__desc">Queso provolone fundido con orégano, tomates cherry y aceite de oliva.</p>
+          </div>
+          <span class="menu-item__price">$ 5.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="entradas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Tabla de Fiambres</h3>
+            <p class="menu-item__desc">Selección de jamón crudo, salame, bondiola, aceitunas y quesos.</p>
+          </div>
+          <span class="menu-item__price">$ 8.200</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="entradas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Mollejas Doradas</h3>
+            <p class="menu-item__desc">Mollejas de ternera grilladas, crocantes por fuera, tiernas por dentro, con limón.</p>
+          </div>
+          <span class="menu-item__price">$ 7.500</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="entradas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Humita en Chala</h3>
+            <p class="menu-item__desc">Choclo fresco rallado con cebolla, envuelto en chala y cocido al vapor.</p>
+          </div>
+          <span class="menu-item__price">$ 4.200</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="entradas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Matambre Arrollado</h3>
+            <p class="menu-item__desc">Matambre tiernizado con morrón, huevo duro y aceitunas, servido frío.</p>
+          </div>
+          <span class="menu-item__price">$ 6.900</span>
+        </div>
+
+        <!-- ─── CARNES A LA PARRILLA ─── -->
+        <div class="menu-item reveal" data-category="carnes">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Bife de Chorizo</h3>
+            <p class="menu-item__desc">Corte grueso de 400g, jugoso y con bordecito dorado. El clásico argentino.</p>
+          </div>
+          <span class="menu-item__price">$ 14.500</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="carnes">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Ojo de Bife</h3>
+            <p class="menu-item__desc">Corte marmoleado de 350g, a punto o como lo prefieras, con chimichurri casero.</p>
+          </div>
+          <span class="menu-item__price">$ 16.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="carnes">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Entraña</h3>
+            <p class="menu-item__desc">Corte tierno con sabor intenso, marinada en hierbas y ajo, a la brasa.</p>
+          </div>
+          <span class="menu-item__price">$ 13.200</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="carnes">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Vacío con Cuero</h3>
+            <p class="menu-item__desc">Cocción lenta de 6 horas al asador, piel crocante y carne de deshace.</p>
+          </div>
+          <span class="menu-item__price">$ 12.500</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="carnes">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Tira de Asado</h3>
+            <p class="menu-item__desc">Costillas cortadas transversalmente, asadas a fuego bajo con sal gruesa.</p>
+          </div>
+          <span class="menu-item__price">$ 11.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="carnes">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Lomo a la Pimienta</h3>
+            <p class="menu-item__desc">Medallón de lomo envuelto en pimienta negra con salsa de crema y cognac.</p>
+          </div>
+          <span class="menu-item__price">$ 17.900</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="carnes">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Parrillada Completa (2 pers.)</h3>
+            <p class="menu-item__desc">Chorizo, morcilla, entraña, tira de asado, chinchu, mollejas y riñón.</p>
+          </div>
+          <span class="menu-item__price">$ 28.500</span>
+        </div>
+
+        <!-- ─── PASTAS ─── -->
+        <div class="menu-item reveal" data-category="pastas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Sorrentinos de Jamón y Queso</h3>
+            <p class="menu-item__desc">Pasta rellena artesanal con salsa fileto de tomates frescos y albahaca.</p>
+          </div>
+          <span class="menu-item__price">$ 9.200</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="pastas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Ñoquis de Papa</h3>
+            <p class="menu-item__desc">Hechos a mano, servidos con salsa bolognesa casera y parmesano rallado.</p>
+          </div>
+          <span class="menu-item__price">$ 7.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="pastas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Ravioles de Verdura</h3>
+            <p class="menu-item__desc">Relleno de ricota, espinaca y nuez moscada, con manteca y salvia.</p>
+          </div>
+          <span class="menu-item__price">$ 8.500</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="pastas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Tallarines al Huevo</h3>
+            <p class="menu-item__desc">Cinta ancha casera con ragú de carne braseada y un toque de vino tinto.</p>
+          </div>
+          <span class="menu-item__price">$ 8.900</span>
+        </div>
+
+        <!-- ─── POSTRES ─── -->
+        <div class="menu-item reveal" data-category="postres">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Flan Casero con Dulce de Leche</h3>
+            <p class="menu-item__desc">Flan de huevo batido a mano, con dulce de leche y crema.</p>
+          </div>
+          <span class="menu-item__price">$ 4.200</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="postres">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Panqueques con Dulce de Leche</h3>
+            <p class="menu-item__desc">Crepas finitas rellenas de DDL, flambeadas con Grand Marnier.</p>
+          </div>
+          <span class="menu-item__price">$ 5.100</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="postres">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Tiramisú de la Casa</h3>
+            <p class="menu-item__desc">Capas de vainillas con café, mascarpone y cacao amargo.</p>
+          </div>
+          <span class="menu-item__price">$ 5.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="postres">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Volcán de Chocolate</h3>
+            <p class="menu-item__desc">Bizcochuelo tibio con centro fundido de chocolate belga, helado de crema.</p>
+          </div>
+          <span class="menu-item__price">$ 6.200</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="postres">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Vigilante</h3>
+            <p class="menu-item__desc">Queso fresco con dulce de batata, el clásico postre argentino.</p>
+          </div>
+          <span class="menu-item__price">$ 3.500</span>
+        </div>
+
+        <!-- ─── BEBIDAS ─── -->
+        <div class="menu-item reveal" data-category="bebidas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Malbec Reserva (botella)</h3>
+            <p class="menu-item__desc">Mendoza, cuerpo pleno, notas de ciruela y chocolate. Ideal con carnes.</p>
+          </div>
+          <span class="menu-item__price">$ 12.500</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="bebidas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Torrontés (botella)</h3>
+            <p class="menu-item__desc">Salta, aromático y fresco, con notas florales. Perfecto con entradas.</p>
+          </div>
+          <span class="menu-item__price">$ 9.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="bebidas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Agua Mineral</h3>
+            <p class="menu-item__desc">Con o sin gas, botella de 750 ml.</p>
+          </div>
+          <span class="menu-item__price">$ 1.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="bebidas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Cerveza Artesanal (pinta)</h3>
+            <p class="menu-item__desc">IPA, Amber Ale o Stout de cervecería local. Consultá la del día.</p>
+          </div>
+          <span class="menu-item__price">$ 3.500</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="bebidas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Limonada con Jengibre</h3>
+            <p class="menu-item__desc">Limones frescos, jengibre rallado y menta. Sin alcohol, refrescante.</p>
+          </div>
+          <span class="menu-item__price">$ 2.800</span>
+        </div>
+
+        <div class="menu-item reveal" data-category="bebidas">
+          <div class="menu-item__info">
+            <h3 class="menu-item__name">Fernet con Coca</h3>
+            <p class="menu-item__desc">El trago nacional: Fernet Branca con Coca-Cola, hielo y buen pulso.</p>
+          </div>
+          <span class="menu-item__price">$ 4.200</span>
+        </div>
+
+      </div><!-- /menu-grid -->
+    </div>
+  </section>
+
+  <!-- ============================
+       ESPECIALIDADES DE LA CASA
+       ============================ -->
+  <section id="especialidades">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Especialidades de la Casa</h2>
+        <div class="divider"><span></span><i class="fas fa-star"></i><span></span></div>
+        <p>Platos insignia que nos definen desde hace décadas</p>
+      </div>
+
+      <div class="especialidades-grid">
+        <div class="especial-card reveal">
+          <span class="especial-card__badge"><i class="fas fa-crown"></i> Recomendado</span>
+          <div class="especial-card__icon"><i class="fas fa-fire-flame-curved"></i></div>
+          <h3 class="especial-card__title">Bife de Chorizo Don Julio</h3>
+          <p class="especial-card__text">500 gramos de puro sabor. Madurado 21 días en cámara, a la brasa con carbón de quebracho. Acompañado de papas rústicas y chimichurri secreto de la casa.</p>
+          <span class="especial-card__price">$ 19.500</span>
+        </div>
+
+        <div class="especial-card reveal">
+          <span class="especial-card__badge"><i class="fas fa-fire"></i> Más pedido</span>
+          <div class="especial-card__icon"><i class="fas fa-drumstick-bite"></i></div>
+          <h3 class="especial-card__title">Parrillada Imperial</h3>
+          <p class="especial-card__text">Para compartir (3–4 personas). Incluye entraña, vacío, chorizo criollo, morcilla, chinchulín, mollejas, riñón y tira de asado. Con ensaladas y salsas.</p>
+          <span class="especial-card__price">$ 42.000</span>
+        </div>
+
+        <div class="especial-card reveal">
+          <div class="especial-card__icon"><i class="fas fa-wine-glass-alt"></i></div>
+          <h3 class="especial-card__title">Experiencia Maridaje</h3>
+          <p class="especial-card__text">Menú degustación de 5 pasos con maridaje de vinos argentinos seleccionados por nuestro sommelier. Entrada, dos platos principales, postre y petit four.</p>
+          <span class="especial-card__price">$ 35.000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       HORARIOS
+       ============================ -->
+  <section id="horarios">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Horarios de Atención</h2>
+        <div class="divider"><span></span><i class="fas fa-clock"></i><span></span></div>
+        <p>Te esperamos para disfrutar una experiencia única</p>
+      </div>
+
+      <div class="horarios-wrapper reveal">
+        <table class="horarios-table">
+          <tr>
+            <td><i class="fas fa-circle" style="font-size:.4rem;color:var(--color-gold);vertical-align:middle;margin-right:.5rem"></i>Lunes</td>
+            <td class="cerrado">Cerrado</td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-circle" style="font-size:.4rem;color:var(--color-gold);vertical-align:middle;margin-right:.5rem"></i>Martes a Jueves</td>
+            <td>12:00 – 15:30 &nbsp;|&nbsp; 19:30 – 00:00</td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-circle" style="font-size:.4rem;color:var(--color-gold);vertical-align:middle;margin-right:.5rem"></i>Viernes</td>
+            <td>12:00 – 16:00 &nbsp;|&nbsp; 19:30 – 01:00</td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-circle" style="font-size:.4rem;color:var(--color-gold);vertical-align:middle;margin-right:.5rem"></i>Sábado</td>
+            <td>12:00 – 16:00 &nbsp;|&nbsp; 20:00 – 01:30</td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-circle" style="font-size:.4rem;color:var(--color-gold);vertical-align:middle;margin-right:.5rem"></i>Domingo</td>
+            <td>12:00 – 16:00</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       RESERVAS
+       ============================ -->
+  <section id="reservas">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Hacé tu Reserva</h2>
+        <div class="divider"><span></span><i class="fas fa-calendar-check"></i><span></span></div>
+        <p>Asegurá tu mesa y vení a disfrutar</p>
+      </div>
+
+      <div class="reservas-wrapper reveal">
+        <div class="reservas-info">
+          <h3>¿Por qué reservar?</h3>
+          <p>Los fines de semana nuestro salón se llena rápido. Para garantizar la mejor experiencia, te recomendamos reservar con al menos 24 horas de anticipación. Aceptamos grupos de hasta 20 personas para eventos privados.</p>
+
+          <div class="reservas-info__detail">
+            <i class="fas fa-phone"></i>
+            <span>+54 11 4832-6058</span>
+          </div>
+          <div class="reservas-info__detail">
+            <i class="fas fa-envelope"></i>
+            <span>reservas@parrilladedonjulio.com.ar</span>
+          </div>
+          <div class="reservas-info__detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Guatemala 4691, Palermo, CABA</span>
+          </div>
+          <div class="reservas-info__detail">
+            <i class="fas fa-info-circle"></i>
+            <span>Cancelaciones hasta 2 horas antes sin cargo.</span>
+          </div>
+        </div>
+
+        <form class="form-reserva" id="formReserva" onsubmit="handleReserva(event)">
+          <div class="form-group">
+            <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha"><i class="fas fa-calendar"></i> Fecha</label>
+              <input type="date" id="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="hora"><i class="fas fa-clock"></i> Hora</label>
+              <select id="hora" required>
+                <option value="">Seleccioná un horario</option>
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+                <option value="22:30">22:30</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="personas"><i class="fas fa-users"></i> Cantidad de personas</label>
+              <select id="personas" required>
+                <option value="">Seleccioná</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7">7 personas</option>
+                <option value="8">8+ personas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
+              <input type="tel" id="telefono" placeholder="Ej: 11 5555-1234" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-reserva">
+            <i class="fas fa-check-circle"></i> &nbsp;Confirmar Reserva
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CONTACTO
+       ============================ -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Encontranos</h2>
+        <div class="divider"><span></span><i class="fas fa-map-pin"></i><span></span></div>
+        <p>Vení a visitarnos en el corazón de Palermo</p>
+      </div>
+
+      <div class="contacto-grid reveal">
+        <div class="contacto-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Dirección</h4>
+          <p>Guatemala 4691<br>Palermo, C1425BUK<br>Ciudad Autónoma de Buenos Aires</p>
+        </div>
+        <div class="contacto-card">
+          <i class="fas fa-phone-alt"></i>
+          <h4>Teléfono</h4>
+          <p>+54 11 4832-6058<br>WhatsApp: +54 11 6234-9871</p>
+        </div>
+        <div class="contacto-card">
+          <i class="fas fa-envelope"></i>
+          <h4>Email</h4>
+          <p>info@parrilladedonjulio.com.ar<br>reservas@parrilladedonjulio.com.ar</p>
+        </div>
+        <div class="contacto-card">
+          <i class="fas fa-hashtag"></i>
+          <h4>Redes Sociales</h4>
+          <p>@parrilladedonjulio<br>en todas las plataformas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h3>La Parrilla de Don Julio</h3>
+        <p>Más de tres décadas celebrando el ritual del asado argentino. Tradición, calidad y pasión en cada corte.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#carta">Carta</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Guatemala 4691, Palermo, CABA</p>
+        <p><i class="fas fa-phone"></i> +54 11 4832-6058</p>
+        <p><i class="fas fa-envelope"></i> info@parrilladedonjulio.com.ar</p>
+        <p><i class="fas fa-clock"></i> Mar a Dom — Mediodía y Noche</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 La Parrilla de Don Julio. Todos los derechos reservados. Sitio desarrollado con <i class="fas fa-heart" style="color:var(--color-red)"></i> en Buenos Aires.</p>
+    </div>
+  </footer>
+
+  <!-- ============================
+       JAVASCRIPT
+       ============================ -->
+  <script>
+    // ── Navbar scroll effect ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Mobile menu toggle ──
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // ── Active nav link on scroll ──
+    const sections = document.querySelectorAll('section, header');
+    const navAnchors = document.querySelectorAll('.navbar__links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 120;
+        if (window.scrollY >= top) current = sec.getAttribute('id');
+      });
+      navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // ── Menu category filter ──
+    const catButtons = document.querySelectorAll('.menu-categories button');
+    const menuItems  = document.querySelectorAll('.menu-item');
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.category;
+
+        menuItems.forEach(item => {
+          if (cat === 'all' || item.dataset.category === cat) {
+            item.style.display = 'flex';
+            item.style.animation = 'fadeInDown .4s ease-out both';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ── Scroll reveal ──
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // ── Reservation form handler ──
+    function handleReserva(e) {
+      e.preventDefault();
+      const nombre   = document.getElementById('nombre').value;
+      const fecha    = document.getElementById('fecha').value;
+      const hora     = document.getElementById('hora').value;
+      const personas = document.getElementById('personas').value;
+      const telefono = document.getElementById('telefono').value;
+
+      alert(
+        `¡Gracias, ${nombre}!\n\nTu reserva fue registrada:\n` +
+        `📅 Fecha: ${fecha}\n⏰ Hora: ${hora}\n` +
+        `👥 Personas: ${personas}\n📞 Teléfono: ${telefono}\n\n` +
+        `Te esperamos en La Parrilla de Don Julio.`
+      );
+      e.target.reset();
+    }
+
+    // ── Set minimum date for reservation ──
+    const fechaInput = document.getElementById('fecha');
+    const today = new Date().toISOString().split('T')[0];
+    fechaInput.setAttribute('min', today);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Vida Vivero — Plantas, Naturaleza y Vida</title>
+    <meta name="description" content="Verde Vida Vivero: tu vivero online en Argentina. Plantas de interior, exterior, suculentas, cactus y más. Envíos a todo el país.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-leaf"></i> Verde Vida <span>Vivero</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+                <li><a href="#cuidados" class="nav-link">Cuidados</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <header class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles">
+            <span class="particle">🌿</span>
+            <span class="particle">🍃</span>
+            <span class="particle">🌱</span>
+            <span class="particle">☘️</span>
+            <span class="particle">🌿</span>
+            <span class="particle">🍀</span>
+            <span class="particle">🌱</span>
+            <span class="particle">🍃</span>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-line">Llevá la</span>
+                <span class="hero-title-highlight">naturaleza</span>
+                <span class="hero-title-line">a tu hogar</span>
+            </h1>
+            <p class="hero-subtitle">Plantas seleccionadas con amor, desde nuestro vivero hasta tu espacio. Más de 200 variedades para transformar tu hogar en un oasis verde.</p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">Ver Catálogo <i class="fas fa-arrow-right"></i></a>
+                <a href="#ofertas" class="btn btn-outline">Ofertas del Mes <i class="fas fa-tag"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Variedades</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">Clientes felices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== BENEFICIOS ==================== -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Envío Cuidado</h3>
+                    <p>Embalaje especial para que tus plantas lleguen perfectas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Garantía Verde</h3>
+                    <p>30 días de garantía en todas nuestras plantas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Asesoramiento</h3>
+                    <p>Te ayudamos a elegir la planta ideal para tu espacio</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Pago Seguro</h3>
+                    <p>Pagá con Mercado Pago en cuotas sin interés</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCTOS ==================== -->
+    <section class="products-section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-seedling"></i> Nuestro Catálogo</span>
+                <h2 class="section-title">Encontrá tu Planta Ideal</h2>
+                <p class="section-subtitle">Explorá nuestra colección de plantas cuidadosamente seleccionadas para cada espacio y estilo de vida</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todas">
+                    <i class="fas fa-th"></i> Todas
+                </button>
+                <button class="filter-btn" data-filter="interior">
+                    <i class="fas fa-home"></i> Interior
+                </button>
+                <button class="filter-btn" data-filter="exterior">
+                    <i class="fas fa-sun"></i> Exterior
+                </button>
+                <button class="filter-btn" data-filter="suculentas">
+                    <i class="fas fa-spa"></i> Suculentas y Cactus
+                </button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+
+                <!-- PLANTAS DE INTERIOR -->
+                <div class="product-card" data-category="interior">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #2d5016, #4a7c23);">
+                        <span class="plant-emoji">🌿</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Potus Dorado</h3>
+                        <p class="product-description">Planta colgante ideal para principiantes. Purifica el aire y crece rápido.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$4.500</span>
+                            <button class="add-to-cart-btn" data-id="1" data-name="Potus Dorado" data-price="4500">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="interior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #1a4d2e, #3d8b5e);">
+                        <span class="plant-emoji">🌴</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Palmera Areca</h3>
+                        <p class="product-description">Elegante y tropical. Perfecta para salones y oficinas con luz indirecta.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$12.800</span>
+                            <button class="add-to-cart-btn" data-id="2" data-name="Palmera Areca" data-price="12800">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="interior">
+                    <div class="product-badge badge-new">Nuevo</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #145a32, #27ae60);">
+                        <span class="plant-emoji">🍃</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Monstera Deliciosa</h3>
+                        <p class="product-description">La famosa "costilla de Adán". Hojas espectaculares que transforman cualquier ambiente.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$9.200</span>
+                            <button class="add-to-cart-btn" data-id="3" data-name="Monstera Deliciosa" data-price="9200">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="interior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #0e4d2a, #1e8449);">
+                        <span class="plant-emoji">🌱</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Ficus Lyrata</h3>
+                        <p class="product-description">Planta de diseño con hojas grandes y brillantes. Ideal para decoración moderna.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$15.500</span>
+                            <button class="add-to-cart-btn" data-id="4" data-name="Ficus Lyrata" data-price="15500">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLANTAS DE EXTERIOR -->
+                <div class="product-card" data-category="exterior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #7d3c98, #a569bd);">
+                        <span class="plant-emoji">🌺</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">Lavanda</h3>
+                        <p class="product-description">Aromática y decorativa. Atrae mariposas y perfuma tu jardín naturalmente.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3.800</span>
+                            <button class="add-to-cart-btn" data-id="5" data-name="Lavanda" data-price="3800">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="exterior">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #c0392b, #e74c3c);">
+                        <span class="plant-emoji">🌹</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">Rosal Híbrido</h3>
+                        <p class="product-description">Rosas de colores vibrantes. Floración abundante durante toda la temporada.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$6.200</span>
+                            <button class="add-to-cart-btn" data-id="6" data-name="Rosal Híbrido" data-price="6200">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="exterior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
+                        <span class="plant-emoji">🌻</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">Girasol Enano</h3>
+                        <p class="product-description">Compacto y radiante. Perfecto para macetas en balcones y terrazas soleadas.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$2.900</span>
+                            <button class="add-to-cart-btn" data-id="7" data-name="Girasol Enano" data-price="2900">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="exterior">
+                    <div class="product-badge badge-new">Nuevo</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #16a085, #1abc9c);">
+                        <span class="plant-emoji">🌳</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">Jazmín del Cabo</h3>
+                        <p class="product-description">Aroma exquisito y flores blancas. El clásico de los jardines argentinos.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$7.600</span>
+                            <button class="add-to-cart-btn" data-id="8" data-name="Jazmín del Cabo" data-price="7600">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUCULENTAS Y CACTUS -->
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-image" style="background: linear-gradient(135deg, #5d8a3c, #8bc34a);">
+                        <span class="plant-emoji">🪴</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Echeveria Elegans</h3>
+                        <p class="product-description">Roseta perfecta en tonos pastel. Ideal para armar composiciones en macetas.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$2.200</span>
+                            <button class="add-to-cart-btn" data-id="9" data-name="Echeveria Elegans" data-price="2200">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #8d6e63, #a1887f);">
+                        <span class="plant-emoji">🌵</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Cactus San Pedro</h3>
+                        <p class="product-description">Columnar y majestuoso. Bajo mantenimiento, ideal para patios soleados.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$5.400</span>
+                            <button class="add-to-cart-btn" data-id="10" data-name="Cactus San Pedro" data-price="5400">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-image" style="background: linear-gradient(135deg, #6d9b3a, #9ccc65);">
+                        <span class="plant-emoji">💚</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Aloe Vera</h3>
+                        <p class="product-description">Medicinal y decorativa. Gel natural con propiedades curativas increíbles.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3.500</span>
+                            <button class="add-to-cart-btn" data-id="11" data-name="Aloe Vera" data-price="3500">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-badge badge-new">Nuevo</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #4e7d2f, #66bb6a);">
+                        <span class="plant-emoji">🌸</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Kalanchoe Florecida</h3>
+                        <p class="product-description">Suculenta con flores vibrantes que duran semanas. Muy fácil de cuidar.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3.100</span>
+                            <button class="add-to-cart-btn" data-id="12" data-name="Kalanchoe Florecida" data-price="3100">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OFERTAS ==================== -->
+    <section class="offers-section" id="ofertas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag tag-offer"><i class="fas fa-fire"></i> Ofertas Especiales</span>
+                <h2 class="section-title">Descuentos del Mes</h2>
+                <p class="section-subtitle">Aprovechá estas ofertas exclusivas. ¡Stock limitado!</p>
+            </div>
+
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">-30%</div>
+                    <div class="offer-image" style="background: linear-gradient(135deg, #1b5e20, #43a047);">
+                        <span class="plant-emoji">🌿</span>
+                    </div>
+                    <div class="offer-info">
+                        <h3>Kit Principiante × 3</h3>
+                        <p>3 plantas fáciles de cuidar: Potus, Cinta y Singonio</p>
+                        <div class="offer-prices">
+                            <span class="price-old">$13.500</span>
+                            <span class="price-new">$9.450</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-offer" data-id="13" data-name="Kit Principiante ×3" data-price="9450">
+                            <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-badge">-25%</div>
+                    <div class="offer-image" style="background: linear-gradient(135deg, #4a148c, #7b1fa2);">
+                        <span class="plant-emoji">🌺</span>
+                    </div>
+                    <div class="offer-info">
+                        <h3>Combo Aromáticas</h3>
+                        <p>Albahaca, Romero, Menta y Lavanda en macetas decorativas</p>
+                        <div class="offer-prices">
+                            <span class="price-old">$11.200</span>
+                            <span class="price-new">$8.400</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-offer" data-id="14" data-name="Combo Aromáticas" data-price="8400">
+                            <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-badge">-20%</div>
+                    <div class="offer-image" style="background: linear-gradient(135deg, #bf360c, #e64a19);">
+                        <span class="plant-emoji">🌵</span>
+                    </div>
+                    <div class="offer-info">
+                        <h3>Set Suculentas × 6</h3>
+                        <p>6 suculentas variadas en macetitas de cerámica artesanal</p>
+                        <div class="offer-prices">
+                            <span class="price-old">$9.000</span>
+                            <span class="price-new">$7.200</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-offer" data-id="15" data-name="Set Suculentas ×6" data-price="7200">
+                            <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUIDADOS ==================== -->
+    <section class="care-section" id="cuidados">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-hand-holding-heart"></i> Tips de Cuidado</span>
+                <h2 class="section-title">Cuidá tus Plantas como un Experto</h2>
+                <p class="section-subtitle">Consejos prácticos para mantener tus plantas sanas, felices y radiantes</p>
+            </div>
+
+            <div class="care-grid">
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Riego Adecuado</h3>
+                    <p>No riegues en exceso. La mayoría de las plantas prefieren que la tierra se seque un poco entre riegos. Usá el método del dedo: si al introducir el dedo 2 cm en la tierra está seca, es momento de regar.</p>
+                    <span class="care-tag">Básico</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Luz Natural</h3>
+                    <p>Cada planta tiene necesidades de luz diferentes. Las de interior generalmente prefieren luz indirecta brillante, mientras que las suculentas y cactus necesitan sol directo varias horas al día.</p>
+                    <span class="care-tag">Importante</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <h3>Temperatura Ideal</h3>
+                    <p>Evitá cambios bruscos de temperatura. La mayoría de las plantas de interior se sienten cómodas entre 18°C y 25°C. Alejalas de corrientes de aire frío y calefacción directa.</p>
+                    <span class="care-tag">Intermedio</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Fertilización</h3>
+                    <p>Fertilizá tus plantas durante primavera y verano con un fertilizante líquido cada 15 días. En otoño e invierno, reducí la frecuencia. Nunca fertilices plantas recién trasplantadas.</p>
+                    <span class="care-tag">Avanzado</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Trasplante</h3>
+                    <p>Trasplantá tus plantas cuando las raíces empiecen a salir por los agujeros de drenaje. Usá una maceta solo un tamaño más grande y sustrato fresco adecuado para cada especie.</p>
+                    <span class="care-tag">Intermedio</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Control de Plagas</h3>
+                    <p>Revisá tus plantas regularmente. Ante la presencia de cochinillas, pulgones o arañuelas, actuá rápido con jabón potásico o aceite de neem. La prevención es clave.</p>
+                    <span class="care-tag">Importante</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Contacto</span>
+                <h2 class="section-title">¡Hablemos!</h2>
+                <p class="section-subtitle">¿Tenés alguna consulta? Escribinos y te respondemos a la brevedad</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="(011) 1234-5678">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto"><i class="fas fa-tag"></i> Asunto</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Seleccioná un tema</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="pedido">Sobre un pedido</option>
+                                <option value="cuidados">Cuidados de plantas</option>
+                                <option value="mayorista">Venta mayorista</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje"><i class="fas fa-comment"></i> Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta acá..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Av. San Martín 4520<br>Villa Devoto, CABA<br>Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 14:00<br>Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>(011) 4567-8901</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+54 9 11 2345-6789</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa placeholder -->
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Av. San Martín 4520, Villa Devoto</p>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Ver en Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,60 1440,60 L1440,120 L0,120 Z" fill="currentColor"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i> Verde Vida <span>Vivero</span>
+                    </div>
+                    <p class="footer-about">Tu vivero de confianza en Buenos Aires. Más de 10 años llevando naturaleza a los hogares argentinos con plantas de calidad y asesoramiento personalizado.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#cuidados">Cuidados</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#">Plantas de Interior</a></li>
+                        <li><a href="#">Plantas de Exterior</a></li>
+                        <li><a href="#">Suculentas y Cactus</a></li>
+                        <li><a href="#">Aromáticas</a></li>
+                        <li><a href="#">Macetas y Accesorios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. San Martín 4520, Villa Devoto</li>
+                        <li><i class="fas fa-phone"></i> (011) 4567-8901</li>
+                        <li><i class="fab fa-whatsapp"></i> +54 9 11 2345-6789</li>
+                        <li><i class="fas fa-envelope"></i> info@verdevidavivero.com.ar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verde Vida Vivero. Todos los derechos reservados.</p>
+                <div class="footer-payments">
+                    <span>Medios de pago:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 20'%3E%3Ctext x='5' y='15' font-size='12' fill='white' font-family='Arial'%3EMP%3C/text%3E%3C/svg%3E" alt="Mercado Pago" style="height: 20px; vertical-align: middle;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== CARRITO SIDEBAR ==================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Mi Carrito</h3>
+            <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Tu carrito está vacío</p>
+                <span>¡Agregá plantas para comenzar!</span>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-totals">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0</span>
+                </div>
+                <div class="cart-shipping">
+                    <span>Envío:</span>
+                    <span id="cartShipping">A calcular</span>
+                </div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0</span>
+                </div>
+            </div>
+            <button class="btn btn-danger btn-full" id="clearCartBtn">
+                <i class="fas fa-trash-alt"></i> Vaciar Carrito
+            </button>
+            <button class="btn btn-mercadopago btn-full" id="checkoutBtn">
+                <i class="fas fa-lock"></i> Pagar con Mercado Pago
+            </button>
+        </div>
+    </aside>
+
+    <!-- ==================== BOTÓN WHATSAPP FLOTANTE ==================== -->
+    <a href="https://wa.me/5491123456789" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== BOTÓN SCROLL TOP ==================== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Mercado Pago SDK -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <!-- App Script -->
+    <script src="js/mercadopago.js"></script>
+
+</body>
+</html>
