@@ -1,0 +1,3117 @@
+﻿<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Vida Vivero â€” Plantas, Naturaleza y Vida</title>
+    <meta name="description" content="Verde Vida Vivero: tu vivero online en Argentina. Plantas de interior, exterior, suculentas, cactus y mÃ¡s. EnvÃ­os a todo el paÃ­s.">
+    <script>
+        if (!location.pathname.endsWith('/') && !location.pathname.endsWith('.html')) {
+            location.replace(location.pathname + '/' + location.search + location.hash);
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- ============================================================== -->
+    <!-- ESTILOS COMPLETOS EMBEBIDOS (LISTO PARA COPIAR Y PEGAR)        -->
+    <!-- ============================================================== -->
+    <style>
+/* ============================================================
+   VERDE VIDA VIVERO â€” Estilos Principales
+   Autor: Verde Vida Vivero
+   Paleta: Verdes naturales, tonos terrosos, blanco
+   TipografÃ­as: Poppins (tÃ­tulos) + Nunito (cuerpo)
+   ============================================================ */
+
+/* ==================== RESET & VARIABLES ==================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores principales */
+    --verde-oscuro: #1a472a;
+    --verde-medio: #2d6a3e;
+    --verde-claro: #4caf50;
+    --verde-menta: #81c784;
+    --verde-palido: #e8f5e9;
+
+    /* Colores terrosos */
+    --tierra-oscura: #4e342e;
+    --tierra-media: #795548;
+    --tierra-clara: #a1887f;
+    --arena: #d7ccc8;
+    --crema: #fdf6ec;
+
+    /* Neutros */
+    --blanco: #ffffff;
+    --gris-50: #fafafa;
+    --gris-100: #f5f5f5;
+    --gris-200: #eeeeee;
+    --gris-300: #e0e0e0;
+    --gris-500: #9e9e9e;
+    --gris-700: #616161;
+    --gris-900: #212121;
+
+    /* Funcionales */
+    --rojo: #e53935;
+    --naranja: #ff9800;
+    --azul-mp: #009ee3;
+
+    /* TipografÃ­as */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Sombras */
+    --sombra-sm: 0 2px 8px rgba(0,0,0,0.08);
+    --sombra-md: 0 4px 20px rgba(0,0,0,0.1);
+    --sombra-lg: 0 8px 40px rgba(0,0,0,0.15);
+    --sombra-card: 0 4px 15px rgba(26,71,42,0.1);
+
+    /* Bordes */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 30px;
+
+    /* Transiciones */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--gris-900);
+    background: var(--blanco);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==================== BOTONES GENERALES ==================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+    color: var(--blanco);
+    box-shadow: 0 4px 15px rgba(76,175,80,0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(76,175,80,0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--blanco);
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: var(--blanco);
+}
+
+.btn-danger {
+    background: transparent;
+    color: var(--rojo);
+    border: 2px solid var(--rojo);
+}
+
+.btn-danger:hover {
+    background: var(--rojo);
+    color: var(--blanco);
+}
+
+.btn-mercadopago {
+    background: linear-gradient(135deg, #009ee3, #00b1ea);
+    color: var(--blanco);
+    box-shadow: 0 4px 15px rgba(0,158,227,0.3);
+    font-size: 1rem;
+}
+
+.btn-mercadopago:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0,158,227,0.4);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 0;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background: rgba(26,71,42,0.95);
+    backdrop-filter: blur(20px);
+    padding: 10px 0;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo i {
+    color: var(--verde-menta);
+    font-size: 1.3rem;
+}
+
+.nav-logo span {
+    color: var(--verde-menta);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.85);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: var(--radius-xl);
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--blanco);
+    background: rgba(255,255,255,0.15);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-btn {
+    position: relative;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: var(--blanco);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cart-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--rojo);
+    color: var(--blanco);
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    transition: var(--transition);
+}
+
+.cart-count.bump {
+    animation: cartBump 0.3s ease;
+}
+
+@keyframes cartBump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--blanco);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ==================== HERO ==================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a2e1a 0%, #1a472a 30%, #2d6a3e 60%, #1b5e20 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(76,175,80,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(129,199,132,0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(46,125,50,0.12) 0%, transparent 50%);
+}
+
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.12;
+    animation: floatParticle 15s infinite linear;
+}
+
+.particle:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; animation-duration: 18s; }
+.particle:nth-child(2) { top: 20%; left: 85%; animation-delay: -3s; animation-duration: 22s; }
+.particle:nth-child(3) { top: 60%; left: 15%; animation-delay: -5s; animation-duration: 16s; }
+.particle:nth-child(4) { top: 80%; left: 75%; animation-delay: -8s; animation-duration: 20s; }
+.particle:nth-child(5) { top: 40%; left: 90%; animation-delay: -2s; animation-duration: 24s; }
+.particle:nth-child(6) { top: 70%; left: 40%; animation-delay: -10s; animation-duration: 19s; }
+.particle:nth-child(7) { top: 15%; left: 55%; animation-delay: -7s; animation-duration: 21s; }
+.particle:nth-child(8) { top: 90%; left: 25%; animation-delay: -4s; animation-duration: 17s; }
+
+@keyframes floatParticle {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(30px, -40px) rotate(90deg); }
+    50% { transform: translate(-20px, -80px) rotate(180deg); }
+    75% { transform: translate(40px, -40px) rotate(270deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 40px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    color: var(--blanco);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-title-line {
+    display: block;
+}
+
+.hero-title-highlight {
+    display: block;
+    background: linear-gradient(135deg, var(--verde-menta), #a5d6a7, #66bb6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 4.5rem;
+}
+
+.hero-subtitle {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    max-width: 550px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--verde-menta);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==================== BENEFICIOS ==================== */
+.benefits {
+    background: var(--verde-oscuro);
+    padding: 50px 0;
+    position: relative;
+}
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--verde-medio), var(--verde-menta), var(--verde-claro), var(--verde-medio));
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--blanco);
+}
+
+.benefit-card h3 {
+    font-family: var(--font-heading);
+    color: var(--blanco);
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.benefit-card p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* ==================== SECCIONES GENÃ‰RICAS ==================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--verde-palido);
+    color: var(--verde-medio);
+    padding: 8px 20px;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.tag-offer {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--verde-oscuro);
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    color: var(--gris-700);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==================== PRODUCTOS ==================== */
+.products-section {
+    padding: 100px 0;
+    background: var(--gris-50);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border: 2px solid var(--gris-300);
+    border-radius: var(--radius-xl);
+    background: var(--blanco);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gris-700);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--verde-claro);
+    color: var(--verde-medio);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+    color: var(--blanco);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(76,175,80,0.3);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--blanco);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: var(--transition);
+    position: relative;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.1s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.2s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.3s; }
+.product-card:nth-child(7) { animation-delay: 0.35s; }
+.product-card:nth-child(8) { animation-delay: 0.4s; }
+.product-card:nth-child(9) { animation-delay: 0.45s; }
+.product-card:nth-child(10) { animation-delay: 0.5s; }
+.product-card:nth-child(11) { animation-delay: 0.55s; }
+.product-card:nth-child(12) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-lg);
+}
+
+.product-card.hidden {
+    display: none;
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+    color: var(--blanco);
+    padding: 5px 14px;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-new {
+    background: linear-gradient(135deg, #e65100, var(--naranja));
+}
+
+.product-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.15), transparent);
+}
+
+.plant-emoji {
+    font-size: 5rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.product-card:hover .plant-emoji {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--verde-medio);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.product-name {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gris-900);
+    margin-bottom: 8px;
+}
+
+.product-description {
+    color: var(--gris-700);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.product-price {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--verde-oscuro);
+}
+
+.add-to-cart-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+    color: var(--blanco);
+    border: none;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.add-to-cart-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(76,175,80,0.3);
+}
+
+.add-to-cart-btn:active {
+    transform: scale(0.95);
+}
+
+/* ==================== OFERTAS ==================== */
+.offers-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--crema), #fef9f0);
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.offer-card {
+    background: var(--blanco);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--sombra-md);
+    position: relative;
+    transition: var(--transition);
+}
+
+.offer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-lg);
+}
+
+.offer-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--rojo);
+    color: var(--blanco);
+    padding: 8px 16px;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+    z-index: 2;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.offer-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-image .plant-emoji {
+    font-size: 4.5rem;
+}
+
+.offer-info {
+    padding: 25px;
+}
+
+.offer-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gris-900);
+    margin-bottom: 8px;
+}
+
+.offer-info p {
+    color: var(--gris-700);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.offer-prices {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.price-old {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--gris-500);
+    text-decoration: line-through;
+}
+
+.price-new {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--rojo);
+}
+
+.btn-offer {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+/* ==================== CUIDADOS ==================== */
+.care-section {
+    padding: 100px 0;
+    background: var(--blanco);
+}
+
+.care-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.care-card {
+    background: var(--gris-50);
+    border: 1px solid var(--gris-200);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.care-card:hover {
+    border-color: var(--verde-claro);
+    box-shadow: var(--sombra-card);
+    transform: translateY(-4px);
+}
+
+.care-icon {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--verde-palido), #c8e6c9);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--verde-medio);
+    margin-bottom: 18px;
+}
+
+.care-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gris-900);
+    margin-bottom: 10px;
+}
+
+.care-card p {
+    color: var(--gris-700);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.care-tag {
+    display: inline-block;
+    background: var(--verde-palido);
+    color: var(--verde-medio);
+    padding: 4px 12px;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==================== CONTACTO ==================== */
+.contact-section {
+    padding: 100px 0;
+    background: var(--gris-50);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-form-wrapper {
+    background: var(--blanco);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--sombra-md);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gris-900);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-group label i {
+    color: var(--verde-medio);
+    font-size: 0.8rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid var(--gris-200);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--gris-900);
+    transition: var(--transition);
+    outline: none;
+    background: var(--gris-50);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--verde-claro);
+    background: var(--blanco);
+    box-shadow: 0 0 0 4px rgba(76,175,80,0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-info-card {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--sombra-md);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--verde-palido);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde-medio);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.info-item h4 {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gris-900);
+    margin-bottom: 3px;
+}
+
+.info-item p {
+    font-size: 0.88rem;
+    color: var(--gris-700);
+    line-height: 1.5;
+}
+
+.map-placeholder {
+    background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+    border-radius: var(--radius-lg);
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.2) 20px, rgba(255,255,255,0.2) 21px),
+        repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255,255,255,0.2) 20px, rgba(255,255,255,0.2) 21px);
+}
+
+.map-overlay {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.map-overlay i {
+    font-size: 2.5rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.map-overlay p {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--verde-oscuro);
+    margin-bottom: 12px;
+}
+
+.map-overlay .btn-outline {
+    color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+}
+
+.map-overlay .btn-outline:hover {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background: var(--verde-oscuro);
+    color: rgba(255,255,255,0.8);
+    position: relative;
+    padding-top: 80px;
+}
+
+.footer-wave {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    color: var(--gris-50);
+    line-height: 0;
+}
+
+.footer-wave svg {
+    width: 100%;
+    height: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--blanco);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo i {
+    color: var(--verde-menta);
+}
+
+.footer-logo span {
+    color: var(--verde-menta);
+}
+
+.footer-about {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    background: var(--verde-claro);
+    transform: translateY(-3px);
+}
+
+.footer-col h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--verde-claro);
+    border-radius: 3px;
+}
+
+.footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--verde-menta);
+    padding-left: 5px;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-contact li i {
+    color: var(--verde-menta);
+    margin-top: 3px;
+    width: 16px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-payments {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+}
+
+.footer-payments i {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* ==================== CARRITO SIDEBAR ==================== */
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 400px;
+    max-width: 100vw;
+    height: 100vh;
+    background: var(--blanco);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--sombra-lg);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--gris-200);
+}
+
+.cart-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gris-900);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-header h3 i {
+    color: var(--verde-medio);
+}
+
+.cart-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--gris-100);
+    color: var(--gris-700);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-close:hover {
+    background: var(--gris-200);
+    color: var(--rojo);
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 25px;
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gris-500);
+}
+
+.cart-empty i {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    opacity: 0.4;
+}
+
+.cart-empty p {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--gris-700);
+}
+
+.cart-empty span {
+    font-size: 0.9rem;
+}
+
+/* Ãtems del carrito */
+.cart-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gris-200);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    background: var(--verde-palido);
+    flex-shrink: 0;
+}
+
+.cart-item-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-item-name {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gris-900);
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--verde-medio);
+    font-weight: 700;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--gris-300);
+    background: var(--blanco);
+    color: var(--gris-700);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.qty-btn:hover {
+    background: var(--verde-palido);
+    border-color: var(--verde-claro);
+    color: var(--verde-medio);
+}
+
+.cart-item-qty {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: var(--gris-500);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 5px;
+    transition: var(--transition);
+    margin-left: auto;
+}
+
+.cart-item-remove:hover {
+    color: var(--rojo);
+}
+
+.cart-footer {
+    padding: 20px 25px;
+    border-top: 1px solid var(--gris-200);
+    background: var(--gris-50);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cart-totals {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.cart-subtotal,
+.cart-shipping {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--gris-700);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--gris-900);
+    padding-top: 8px;
+    border-top: 2px solid var(--gris-300);
+}
+
+/* ==================== WHATSAPP FLOTANTE ==================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 1.8rem;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    z-index: 900;
+    transition: var(--transition);
+    animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+}
+
+@keyframes whatsappPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6); }
+}
+
+/* ==================== SCROLL TOP ==================== */
+.scroll-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+    border: none;
+    border-radius: 50%;
+    color: var(--blanco);
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    z-index: 900;
+    box-shadow: 0 4px 15px rgba(76,175,80,0.3);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(76,175,80,0.4);
+}
+
+/* ==================== NOTIFICACIÃ“N TOAST ==================== */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 14px 28px;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: var(--sombra-lg);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast i {
+    color: var(--verde-menta);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-title-highlight { font-size: 3.5rem; }
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--verde-oscuro);
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        gap: 5px;
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        box-shadow: var(--sombra-lg);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        padding: 12px 16px;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-title { font-size: 2.2rem; }
+    .hero-title-highlight { font-size: 2.8rem; }
+    .hero-subtitle { font-size: 1rem; }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .stat-number { font-size: 1.5rem; }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-title { font-size: 2rem; }
+
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+
+    .contact-grid { grid-template-columns: 1fr; }
+
+    .form-row { grid-template-columns: 1fr; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 1.8rem; }
+    .hero-title-highlight { font-size: 2.2rem; }
+
+    .benefits-grid { grid-template-columns: 1fr; }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .care-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .filter-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-leaf"></i> Verde Vida <span>Vivero</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+                <li><a href="#cuidados" class="nav-link">Cuidados</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="MenÃº">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <header class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles">
+            <span class="particle">ðŸŒ¿</span>
+            <span class="particle">ðŸƒ</span>
+            <span class="particle">ðŸŒ±</span>
+            <span class="particle">â˜˜ï¸</span>
+            <span class="particle">ðŸŒ¿</span>
+            <span class="particle">ðŸ€</span>
+            <span class="particle">ðŸŒ±</span>
+            <span class="particle">ðŸƒ</span>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-line">LlevÃ¡ la</span>
+                <span class="hero-title-highlight">naturaleza</span>
+                <span class="hero-title-line">a tu hogar</span>
+            </h1>
+            <p class="hero-subtitle">Plantas seleccionadas con amor, desde nuestro vivero hasta tu espacio. MÃ¡s de 200 variedades para transformar tu hogar en un oasis verde.</p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">Ver CatÃ¡logo <i class="fas fa-arrow-right"></i></a>
+                <a href="#ofertas" class="btn btn-outline">Ofertas del Mes <i class="fas fa-tag"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Variedades</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">Clientes felices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">AÃ±os de experiencia</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== BENEFICIOS ==================== -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-truck"></i></div>
+                    <h3>EnvÃ­o Cuidado</h3>
+                    <p>Embalaje especial para que tus plantas lleguen perfectas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>GarantÃ­a Verde</h3>
+                    <p>30 dÃ­as de garantÃ­a en todas nuestras plantas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Asesoramiento</h3>
+                    <p>Te ayudamos a elegir la planta ideal para tu espacio</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Pago Seguro</h3>
+                    <p>PagÃ¡ con Mercado Pago en cuotas sin interÃ©s</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCTOS ==================== -->
+    <section class="products-section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-seedling"></i> Nuestro CatÃ¡logo</span>
+                <h2 class="section-title">EncontrÃ¡ tu Planta Ideal</h2>
+                <p class="section-subtitle">ExplorÃ¡ nuestra colecciÃ³n de plantas cuidadosamente seleccionadas para cada espacio y estilo de vida</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todas">
+                    <i class="fas fa-th"></i> Todas
+                </button>
+                <button class="filter-btn" data-filter="interior">
+                    <i class="fas fa-home"></i> Interior
+                </button>
+                <button class="filter-btn" data-filter="exterior">
+                    <i class="fas fa-sun"></i> Exterior
+                </button>
+                <button class="filter-btn" data-filter="suculentas">
+                    <i class="fas fa-spa"></i> Suculentas y Cactus
+                </button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+
+                <!-- PLANTAS DE INTERIOR -->
+                <div class="product-card" data-category="interior">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #2d5016, #4a7c23);">
+                        <span class="plant-emoji">ðŸŒ¿</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Potus Dorado</h3>
+                        <p class="product-description">Planta colgante ideal para principiantes. Purifica el aire y crece rÃ¡pido.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$4.500</span>
+                            <button class="add-to-cart-btn" data-id="1" data-name="Potus Dorado" data-price="4500">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="interior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #1a4d2e, #3d8b5e);">
+                        <span class="plant-emoji">ðŸŒ´</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Palmera Areca</h3>
+                        <p class="product-description">Elegante y tropical. Perfecta para salones y oficinas con luz indirecta.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$12.800</span>
+                            <button class="add-to-cart-btn" data-id="2" data-name="Palmera Areca" data-price="12800">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="interior">
+                    <div class="product-badge badge-new">Nuevo</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #145a32, #27ae60);">
+                        <span class="plant-emoji">ðŸƒ</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Monstera Deliciosa</h3>
+                        <p class="product-description">La famosa "costilla de AdÃ¡n". Hojas espectaculares que transforman cualquier ambiente.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$9.200</span>
+                            <button class="add-to-cart-btn" data-id="3" data-name="Monstera Deliciosa" data-price="9200">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="interior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #0e4d2a, #1e8449);">
+                        <span class="plant-emoji">ðŸŒ±</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Interior</span>
+                        <h3 class="product-name">Ficus Lyrata</h3>
+                        <p class="product-description">Planta de diseÃ±o con hojas grandes y brillantes. Ideal para decoraciÃ³n moderna.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$15.500</span>
+                            <button class="add-to-cart-btn" data-id="4" data-name="Ficus Lyrata" data-price="15500">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLANTAS DE EXTERIOR -->
+                <div class="product-card" data-category="exterior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #7d3c98, #a569bd);">
+                        <span class="plant-emoji">ðŸŒº</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">Lavanda</h3>
+                        <p class="product-description">AromÃ¡tica y decorativa. Atrae mariposas y perfuma tu jardÃ­n naturalmente.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3.800</span>
+                            <button class="add-to-cart-btn" data-id="5" data-name="Lavanda" data-price="3800">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="exterior">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #c0392b, #e74c3c);">
+                        <span class="plant-emoji">ðŸŒ¹</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">Rosal HÃ­brido</h3>
+                        <p class="product-description">Rosas de colores vibrantes. FloraciÃ³n abundante durante toda la temporada.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$6.200</span>
+                            <button class="add-to-cart-btn" data-id="6" data-name="Rosal HÃ­brido" data-price="6200">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="exterior">
+                    <div class="product-image" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
+                        <span class="plant-emoji">ðŸŒ»</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">Girasol Enano</h3>
+                        <p class="product-description">Compacto y radiante. Perfecto para macetas en balcones y terrazas soleadas.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$2.900</span>
+                            <button class="add-to-cart-btn" data-id="7" data-name="Girasol Enano" data-price="2900">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="exterior">
+                    <div class="product-badge badge-new">Nuevo</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #16a085, #1abc9c);">
+                        <span class="plant-emoji">ðŸŒ³</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Planta de Exterior</span>
+                        <h3 class="product-name">JazmÃ­n del Cabo</h3>
+                        <p class="product-description">Aroma exquisito y flores blancas. El clÃ¡sico de los jardines argentinos.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$7.600</span>
+                            <button class="add-to-cart-btn" data-id="8" data-name="JazmÃ­n del Cabo" data-price="7600">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUCULENTAS Y CACTUS -->
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-image" style="background: linear-gradient(135deg, #5d8a3c, #8bc34a);">
+                        <span class="plant-emoji">ðŸª´</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Echeveria Elegans</h3>
+                        <p class="product-description">Roseta perfecta en tonos pastel. Ideal para armar composiciones en macetas.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$2.200</span>
+                            <button class="add-to-cart-btn" data-id="9" data-name="Echeveria Elegans" data-price="2200">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #8d6e63, #a1887f);">
+                        <span class="plant-emoji">ðŸŒµ</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Cactus San Pedro</h3>
+                        <p class="product-description">Columnar y majestuoso. Bajo mantenimiento, ideal para patios soleados.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$5.400</span>
+                            <button class="add-to-cart-btn" data-id="10" data-name="Cactus San Pedro" data-price="5400">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-image" style="background: linear-gradient(135deg, #6d9b3a, #9ccc65);">
+                        <span class="plant-emoji">ðŸ’š</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Aloe Vera</h3>
+                        <p class="product-description">Medicinal y decorativa. Gel natural con propiedades curativas increÃ­bles.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3.500</span>
+                            <button class="add-to-cart-btn" data-id="11" data-name="Aloe Vera" data-price="3500">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="suculentas">
+                    <div class="product-badge badge-new">Nuevo</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #4e7d2f, #66bb6a);">
+                        <span class="plant-emoji">ðŸŒ¸</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Suculentas y Cactus</span>
+                        <h3 class="product-name">Kalanchoe Florecida</h3>
+                        <p class="product-description">Suculenta con flores vibrantes que duran semanas. Muy fÃ¡cil de cuidar.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3.100</span>
+                            <button class="add-to-cart-btn" data-id="12" data-name="Kalanchoe Florecida" data-price="3100">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OFERTAS ==================== -->
+    <section class="offers-section" id="ofertas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag tag-offer"><i class="fas fa-fire"></i> Ofertas Especiales</span>
+                <h2 class="section-title">Descuentos del Mes</h2>
+                <p class="section-subtitle">AprovechÃ¡ estas ofertas exclusivas. Â¡Stock limitado!</p>
+            </div>
+
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">-30%</div>
+                    <div class="offer-image" style="background: linear-gradient(135deg, #1b5e20, #43a047);">
+                        <span class="plant-emoji">ðŸŒ¿</span>
+                    </div>
+                    <div class="offer-info">
+                        <h3>Kit Principiante Ã— 3</h3>
+                        <p>3 plantas fÃ¡ciles de cuidar: Potus, Cinta y Singonio</p>
+                        <div class="offer-prices">
+                            <span class="price-old">$13.500</span>
+                            <span class="price-new">$9.450</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-offer" data-id="13" data-name="Kit Principiante Ã—3" data-price="9450">
+                            <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-badge">-25%</div>
+                    <div class="offer-image" style="background: linear-gradient(135deg, #4a148c, #7b1fa2);">
+                        <span class="plant-emoji">ðŸŒº</span>
+                    </div>
+                    <div class="offer-info">
+                        <h3>Combo AromÃ¡ticas</h3>
+                        <p>Albahaca, Romero, Menta y Lavanda en macetas decorativas</p>
+                        <div class="offer-prices">
+                            <span class="price-old">$11.200</span>
+                            <span class="price-new">$8.400</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-offer" data-id="14" data-name="Combo AromÃ¡ticas" data-price="8400">
+                            <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-badge">-20%</div>
+                    <div class="offer-image" style="background: linear-gradient(135deg, #bf360c, #e64a19);">
+                        <span class="plant-emoji">ðŸŒµ</span>
+                    </div>
+                    <div class="offer-info">
+                        <h3>Set Suculentas Ã— 6</h3>
+                        <p>6 suculentas variadas en macetitas de cerÃ¡mica artesanal</p>
+                        <div class="offer-prices">
+                            <span class="price-old">$9.000</span>
+                            <span class="price-new">$7.200</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-offer" data-id="15" data-name="Set Suculentas Ã—6" data-price="7200">
+                            <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUIDADOS ==================== -->
+    <section class="care-section" id="cuidados">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-hand-holding-heart"></i> Tips de Cuidado</span>
+                <h2 class="section-title">CuidÃ¡ tus Plantas como un Experto</h2>
+                <p class="section-subtitle">Consejos prÃ¡cticos para mantener tus plantas sanas, felices y radiantes</p>
+            </div>
+
+            <div class="care-grid">
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Riego Adecuado</h3>
+                    <p>No riegues en exceso. La mayorÃ­a de las plantas prefieren que la tierra se seque un poco entre riegos. UsÃ¡ el mÃ©todo del dedo: si al introducir el dedo 2 cm en la tierra estÃ¡ seca, es momento de regar.</p>
+                    <span class="care-tag">BÃ¡sico</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Luz Natural</h3>
+                    <p>Cada planta tiene necesidades de luz diferentes. Las de interior generalmente prefieren luz indirecta brillante, mientras que las suculentas y cactus necesitan sol directo varias horas al dÃ­a.</p>
+                    <span class="care-tag">Importante</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <h3>Temperatura Ideal</h3>
+                    <p>EvitÃ¡ cambios bruscos de temperatura. La mayorÃ­a de las plantas de interior se sienten cÃ³modas entre 18Â°C y 25Â°C. Alejalas de corrientes de aire frÃ­o y calefacciÃ³n directa.</p>
+                    <span class="care-tag">Intermedio</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>FertilizaciÃ³n</h3>
+                    <p>FertilizÃ¡ tus plantas durante primavera y verano con un fertilizante lÃ­quido cada 15 dÃ­as. En otoÃ±o e invierno, reducÃ­ la frecuencia. Nunca fertilices plantas reciÃ©n trasplantadas.</p>
+                    <span class="care-tag">Avanzado</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Trasplante</h3>
+                    <p>TrasplantÃ¡ tus plantas cuando las raÃ­ces empiecen a salir por los agujeros de drenaje. UsÃ¡ una maceta solo un tamaÃ±o mÃ¡s grande y sustrato fresco adecuado para cada especie.</p>
+                    <span class="care-tag">Intermedio</span>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Control de Plagas</h3>
+                    <p>RevisÃ¡ tus plantas regularmente. Ante la presencia de cochinillas, pulgones o araÃ±uelas, actuÃ¡ rÃ¡pido con jabÃ³n potÃ¡sico o aceite de neem. La prevenciÃ³n es clave.</p>
+                    <span class="care-tag">Importante</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Contacto</span>
+                <h2 class="section-title">Â¡Hablemos!</h2>
+                <p class="section-subtitle">Â¿TenÃ©s alguna consulta? Escribinos y te respondemos a la brevedad</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono"><i class="fas fa-phone"></i> TelÃ©fono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="(011) 1234-5678">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto"><i class="fas fa-tag"></i> Asunto</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">SeleccionÃ¡ un tema</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="pedido">Sobre un pedido</option>
+                                <option value="cuidados">Cuidados de plantas</option>
+                                <option value="mayorista">Venta mayorista</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje"><i class="fas fa-comment"></i> Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="EscribÃ­ tu consulta acÃ¡..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>DirecciÃ³n</h4>
+                                <p>Av. Rafael NÃºÃ±ez 4200<br>Cerro de las Rosas<br>CÃ³rdoba Capital, Argentina</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Horario de AtenciÃ³n</h4>
+                                <p>Lunes a Viernes: 9:00 - 18:00<br>SÃ¡bados: 9:00 - 14:00<br>Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>TelÃ©fono</h4>
+                                <p>(0351) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+54 9 351 234-5678</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa placeholder -->
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Av. San MartÃ­n 4520, Villa Devoto</p>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Ver en Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,60 1440,60 L1440,120 L0,120 Z" fill="currentColor"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i> Verde Vida <span>Vivero</span>
+                    </div>
+                    <p class="footer-about">Tu vivero de confianza en CÃ³rdoba. MÃ¡s de 10 aÃ±os llevando naturaleza a los hogares argentinos con plantas de calidad y asesoramiento personalizado.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Enlaces RÃ¡pidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#cuidados">Cuidados</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>CategorÃ­as</h4>
+                    <ul>
+                        <li><a href="#">Plantas de Interior</a></li>
+                        <li><a href="#">Plantas de Exterior</a></li>
+                        <li><a href="#">Suculentas y Cactus</a></li>
+                        <li><a href="#">AromÃ¡ticas</a></li>
+                        <li><a href="#">Macetas y Accesorios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Rafael NÃºÃ±ez 4200, Cerro de las Rosas, CÃ³rdoba</li>
+                        <li><i class="fas fa-phone"></i> (0351) 456-7890</li>
+                        <li><i class="fab fa-whatsapp"></i> +54 9 351 234-5678</li>
+                        <li><i class="fas fa-envelope"></i> info@verdevidavivero.com.ar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Verde Vida Vivero. Derechos Reservados por MNA.</p>
+                <div class="footer-payments">
+                    <span>Medios de pago:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 20'%3E%3Ctext x='5' y='15' font-size='12' fill='white' font-family='Arial'%3EMP%3C/text%3E%3C/svg%3E" alt="Mercado Pago" style="height: 20px; vertical-align: middle;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== CARRITO SIDEBAR ==================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Mi Carrito</h3>
+            <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Tu carrito estÃ¡ vacÃ­o</p>
+                <span>Â¡AgregÃ¡ plantas para comenzar!</span>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-totals">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0</span>
+                </div>
+                <div class="cart-shipping">
+                    <span>EnvÃ­o:</span>
+                    <span id="cartShipping">A calcular</span>
+                </div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0</span>
+                </div>
+            </div>
+            <button class="btn btn-danger btn-full" id="clearCartBtn">
+                <i class="fas fa-trash-alt"></i> Vaciar Carrito
+            </button>
+            <button class="btn btn-mercadopago btn-full" id="checkoutBtn">
+                <i class="fas fa-lock"></i> Pagar con Mercado Pago
+            </button>
+        </div>
+    </aside>
+
+    <!-- ==================== BOTÃ“N WHATSAPP FLOTANTE ==================== -->
+    <a href="https://wa.me/5491123456789" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== BOTÃ“N SCROLL TOP ==================== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Mercado Pago SDK -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <!-- App Script -->
+        <!-- ============================================================== -->
+    <!-- JAVASCRIPT Y MERCADO PAGO EMBEBIDO (LISTO PARA MODIFICAR)      -->
+    <!-- ============================================================== -->
+    <script>
+/**
+ * ============================================================
+ * VERDE VIDA VIVERO â€” IntegraciÃ³n con Mercado Pago
+ * ============================================================
+ *
+ * GUÃA DE CONFIGURACIÃ“N / SETUP
+ * â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+ *
+ * 1. CREAR UNA CUENTA EN MERCADO PAGO DEVELOPERS:
+ *    â†’ https://www.mercadopago.com.ar/developers
+ *    â†’ Registrate o iniciÃ¡ sesiÃ³n con tu cuenta de Mercado Pago.
+ *
+ * 2. OBTENER TUS CREDENCIALES:
+ *    â†’ AndÃ¡ a "Tus integraciones" â†’ Crear aplicaciÃ³n
+ *    â†’ CopiÃ¡ tu PUBLIC_KEY y tu ACCESS_TOKEN
+ *    â†’ ReemplazÃ¡ 'YOUR_PUBLIC_KEY' en este archivo por tu Public Key real.
+ *
+ * 3. CONFIGURAR EL BACKEND:
+ *    â†’ NecesitÃ¡s un servidor (Node.js, Python, PHP, etc.) que reciba
+ *      los datos del carrito y cree una "preferencia de pago" usando
+ *      el SDK de Mercado Pago del lado del servidor.
+ *    â†’ Endpoint recomendado: POST /create_preference
+ *    â†’ El backend debe usar el ACCESS_TOKEN (nunca lo expongas en el frontend).
+ *    â†’ DocumentaciÃ³n: https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/landing
+ *
+ * 4. ACTUALIZAR LA URL DEL BACKEND:
+ *    â†’ CambiÃ¡ la constante BACKEND_URL por la URL de tu servidor.
+ *    â†’ Ejemplo: 'https://tu-servidor.com/create_preference'
+ *
+ * 5. FLUJO DE PAGO:
+ *    â†’ El cliente agrega productos al carrito.
+ *    â†’ Al hacer clic en "Pagar con Mercado Pago", se envÃ­an los items
+ *      al backend, que crea una preferencia y devuelve un init_point.
+ *    â†’ Se redirige al cliente a Mercado Pago para completar el pago.
+ *    â†’ Mercado Pago redirige de vuelta a tu sitio con el resultado.
+ *
+ * ============================================================
+ */
+
+// ==================== CONFIGURACIÃ“N ====================
+
+/**
+ * IMPORTANTE: ReemplazÃ¡ 'YOUR_PUBLIC_KEY' con tu Public Key real de Mercado Pago.
+ * La encontrÃ¡s en: https://www.mercadopago.com.ar/developers/panel/app
+ */
+const MP_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+/**
+ * URL de tu backend que crea la preferencia de pago.
+ * CambiÃ¡ esta URL por la de tu servidor real.
+ */
+const BACKEND_URL = '/create_preference';
+
+// ==================== ESTADO DEL CARRITO ====================
+
+let cart = [];
+
+// Intentar recuperar carrito guardado en localStorage
+try {
+    const savedCart = localStorage.getItem('verdeVidaCart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+} catch (e) {
+    console.warn('No se pudo recuperar el carrito guardado:', e);
+}
+
+// ==================== ELEMENTOS DEL DOM ====================
+
+const cartBtn = document.getElementById('cartBtn');
+const cartSidebar = document.getElementById('cartSidebar');
+const cartOverlay = document.getElementById('cartOverlay');
+const cartClose = document.getElementById('cartClose');
+const cartItems = document.getElementById('cartItems');
+const cartEmpty = document.getElementById('cartEmpty');
+const cartFooter = document.getElementById('cartFooter');
+const cartCount = document.getElementById('cartCount');
+const cartSubtotal = document.getElementById('cartSubtotal');
+const cartShipping = document.getElementById('cartShipping');
+const cartTotal = document.getElementById('cartTotal');
+const clearCartBtn = document.getElementById('clearCartBtn');
+const checkoutBtn = document.getElementById('checkoutBtn');
+const productsGrid = document.getElementById('productsGrid');
+const scrollTopBtn = document.getElementById('scrollTop');
+const navbar = document.getElementById('navbar');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+const contactForm = document.getElementById('contactForm');
+
+// ==================== EMOJIS POR PRODUCTO ====================
+
+const productEmojis = {
+    1: 'ðŸŒ¿', 2: 'ðŸŒ´', 3: 'ðŸƒ', 4: 'ðŸŒ±',
+    5: 'ðŸŒº', 6: 'ðŸŒ¹', 7: 'ðŸŒ»', 8: 'ðŸŒ³',
+    9: 'ðŸª´', 10: 'ðŸŒµ', 11: 'ðŸ’š', 12: 'ðŸŒ¸',
+    13: 'ðŸŒ¿', 14: 'ðŸŒº', 15: 'ðŸŒµ'
+};
+
+// ==================== INICIALIZACIÃ“N ====================
+
+document.addEventListener('DOMContentLoaded', () => {
+    initEventListeners();
+    updateCartUI();
+    initScrollEffects();
+    initFilterButtons();
+    initIntersectionObserver();
+});
+
+// ==================== EVENT LISTENERS ====================
+
+function initEventListeners() {
+    // Abrir/cerrar carrito
+    cartBtn.addEventListener('click', openCart);
+    cartClose.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    // Botones de agregar al carrito
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+        btn.addEventListener('click', handleAddToCart);
+    });
+
+    // Vaciar carrito
+    clearCartBtn.addEventListener('click', clearCart);
+
+    // Pagar con Mercado Pago
+    checkoutBtn.addEventListener('click', handleCheckout);
+
+    // Hamburger menu
+    hamburger.addEventListener('click', toggleMobileMenu);
+
+    // Cerrar menÃº al hacer clic en un enlace
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+
+    // Formulario de contacto
+    contactForm.addEventListener('submit', handleContactForm);
+
+    // Scroll to top
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Cerrar carrito con Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeCart();
+    });
+}
+
+// ==================== CARRITO: AGREGAR PRODUCTO ====================
+
+function handleAddToCart(e) {
+    const btn = e.currentTarget;
+    const id = parseInt(btn.dataset.id);
+    const name = btn.dataset.name;
+    const price = parseInt(btn.dataset.price);
+
+    addToCart(id, name, price);
+
+    // AnimaciÃ³n del botÃ³n
+    btn.style.transform = 'scale(0.9)';
+    setTimeout(() => { btn.style.transform = ''; }, 150);
+}
+
+function addToCart(id, name, price) {
+    const existingItem = cart.find(item => item.id === id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            id,
+            name,
+            price,
+            quantity: 1,
+            emoji: productEmojis[id] || 'ðŸŒ¿'
+        });
+    }
+
+    saveCart();
+    updateCartUI();
+    showToast(`"${name}" agregado al carrito`);
+    animateCartBadge();
+}
+
+// ==================== CARRITO: ELIMINAR PRODUCTO ====================
+
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    saveCart();
+    updateCartUI();
+}
+
+// ==================== CARRITO: ACTUALIZAR CANTIDAD ====================
+
+function updateQuantity(id, delta) {
+    const item = cart.find(item => item.id === id);
+    if (!item) return;
+
+    item.quantity += delta;
+
+    if (item.quantity <= 0) {
+        removeFromCart(id);
+        return;
+    }
+
+    saveCart();
+    updateCartUI();
+}
+
+// ==================== CARRITO: VACIAR ====================
+
+function clearCart() {
+    if (cart.length === 0) return;
+
+    // Confirmar antes de vaciar
+    if (confirm('Â¿EstÃ¡s seguro de que querÃ©s vaciar el carrito?')) {
+        cart = [];
+        saveCart();
+        updateCartUI();
+        showToast('Carrito vaciado');
+    }
+}
+
+// ==================== CARRITO: GUARDAR EN LOCALSTORAGE ====================
+
+function saveCart() {
+    try {
+        localStorage.setItem('verdeVidaCart', JSON.stringify(cart));
+    } catch (e) {
+        console.warn('No se pudo guardar el carrito:', e);
+    }
+}
+
+// ==================== CARRITO: ACTUALIZAR UI ====================
+
+function updateCartUI() {
+    // Actualizar badge del contador
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totalItems;
+
+    // Mostrar/ocultar elementos segÃºn si hay items
+    if (cart.length === 0) {
+        cartItems.innerHTML = `
+            <div class="cart-empty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Tu carrito estÃ¡ vacÃ­o</p>
+                <span>Â¡AgregÃ¡ plantas para comenzar!</span>
+            </div>
+        `;
+        cartFooter.style.display = 'none';
+        return;
+    }
+
+    // Renderizar items
+    cartFooter.style.display = 'flex';
+    cartItems.innerHTML = cart.map(item => `
+        <div class="cart-item" data-id="${item.id}">
+            <div class="cart-item-image">${item.emoji}</div>
+            <div class="cart-item-details">
+                <div class="cart-item-name">${item.name}</div>
+                <div class="cart-item-price">${item.price.toLocaleString('es-AR')}</div>
+                <div class="cart-item-actions">
+                    <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)" aria-label="Reducir cantidad">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="cart-item-qty">${item.quantity}</span>
+                    <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)" aria-label="Aumentar cantidad">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="cart-item-remove" onclick="removeFromCart(${item.id})" aria-label="Eliminar">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    // Calcular totales
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const envioGratis = subtotal >= 15000;
+    const envio = envioGratis ? 0 : 2500;
+    const total = subtotal + envio;
+
+    cartSubtotal.textContent = `${subtotal.toLocaleString('es-AR')}`;
+    cartShipping.textContent = envioGratis ? 'Â¡Gratis!' : `${envio.toLocaleString('es-AR')}`;
+    cartShipping.style.color = envioGratis ? '#4caf50' : '';
+    cartTotal.textContent = `${total.toLocaleString('es-AR')}`;
+}
+
+// ==================== CARRITO: ABRIR/CERRAR ====================
+
+function openCart() {
+    cartSidebar.classList.add('active');
+    cartOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+    cartSidebar.classList.remove('active');
+    cartOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// ==================== ANIMACIÃ“N BADGE DEL CARRITO ====================
+
+function animateCartBadge() {
+    cartCount.classList.add('bump');
+    setTimeout(() => cartCount.classList.remove('bump'), 300);
+}
+
+// ==================== MERCADO PAGO: CHECKOUT ====================
+
+/**
+ * FunciÃ³n principal de checkout.
+ * Cuando se configure el backend real, esta funciÃ³n enviarÃ¡ los datos
+ * del carrito al servidor para crear una preferencia de pago.
+ */
+async function handleCheckout() {
+    if (cart.length === 0) {
+        showToast('Tu carrito estÃ¡ vacÃ­o');
+        return;
+    }
+
+    // Verificar si el backend estÃ¡ configurado
+    if (BACKEND_URL === '/create_preference' && MP_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+        // Modo demo: mostrar informaciÃ³n de configuraciÃ³n
+        showCheckoutDemo();
+        return;
+    }
+
+    try {
+        // Crear la preferencia de pago en el backend
+        const preference = await createPreference();
+
+        if (preference && preference.id) {
+            // Inicializar Mercado Pago y redirigir al checkout
+            redirectToCheckout(preference.id);
+        }
+    } catch (error) {
+        console.error('Error en el checkout:', error);
+        showToast('Error al procesar el pago. IntentÃ¡ de nuevo.');
+    }
+}
+
+/**
+ * Crea una preferencia de pago enviando los items del carrito al backend.
+ *
+ * El backend debe:
+ * 1. Recibir los items del carrito (POST JSON).
+ * 2. Crear una preferencia usando el SDK de Mercado Pago con el ACCESS_TOKEN.
+ * 3. Devolver el objeto de preferencia con el "id" y/o "init_point".
+ *
+ * Ejemplo de body que se envÃ­a:
+ * {
+ *   "items": [
+ *     { "title": "Potus Dorado", "quantity": 2, "unit_price": 4500, "currency_id": "ARS" },
+ *     { "title": "Monstera Deliciosa", "quantity": 1, "unit_price": 9200, "currency_id": "ARS" }
+ *   ],
+ *   "payer": { ... }  // Opcional: datos del comprador
+ * }
+ */
+async function createPreference() {
+    // Preparar los items en el formato que espera Mercado Pago
+    const items = cart.map(item => ({
+        title: item.name,
+        description: `Planta - ${item.name} | Verde Vida Vivero`,
+        quantity: item.quantity,
+        unit_price: item.price,
+        currency_id: 'ARS'
+    }));
+
+    // Agregar costo de envÃ­o si corresponde
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    if (subtotal < 15000) {
+        items.push({
+            title: 'Costo de envÃ­o',
+            description: 'EnvÃ­o estÃ¡ndar - Verde Vida Vivero',
+            quantity: 1,
+            unit_price: 2500,
+            currency_id: 'ARS'
+        });
+    }
+
+    // Enviar al backend
+    const response = await fetch(BACKEND_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            items: items,
+            // URLs de retorno (configurar con tu dominio)
+            back_urls: {
+                success: window.location.origin + '/pago-exitoso',
+                failure: window.location.origin + '/pago-fallido',
+                pending: window.location.origin + '/pago-pendiente'
+            },
+            auto_return: 'approved',
+            // InformaciÃ³n adicional
+            external_reference: `VVV-${Date.now()}`,
+            notification_url: window.location.origin + '/webhook/mercadopago'
+        })
+    });
+
+    if (!response.ok) {
+        throw new Error(`Error del servidor: ${response.status}`);
+    }
+
+    return await response.json();
+}
+
+/**
+ * Inicializa el SDK de Mercado Pago y redirige al checkout.
+ * Requiere que el SDK estÃ© cargado: <script src="https://sdk.mercadopago.com/js/v2"></script>
+ */
+function redirectToCheckout(preferenceId) {
+    // Verificar que el SDK de Mercado Pago estÃ© cargado
+    if (typeof MercadoPago === 'undefined') {
+        console.error('El SDK de Mercado Pago no estÃ¡ cargado.');
+        showToast('Error: SDK de Mercado Pago no disponible.');
+        return;
+    }
+
+    // Inicializar Mercado Pago con la Public Key
+    const mp = new MercadoPago(MP_PUBLIC_KEY, {
+        locale: 'es-AR'
+    });
+
+    // Crear el checkout y redirigir
+    mp.checkout({
+        preference: {
+            id: preferenceId
+        },
+        autoOpen: true  // Abrir automÃ¡ticamente el checkout de Mercado Pago
+    });
+}
+
+/**
+ * Modo demo: muestra un alert explicativo cuando no hay backend configurado.
+ * Esto permite probar el flujo del carrito sin necesidad de un servidor real.
+ */
+function showCheckoutDemo() {
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const envioGratis = subtotal >= 15000;
+    const envio = envioGratis ? 0 : 2500;
+    const total = subtotal + envio;
+
+    const itemsList = cart.map(item =>
+        `  â€¢ ${item.name} Ã— ${item.quantity} = ${(item.price * item.quantity).toLocaleString('es-AR')}`
+    ).join('\n');
+
+    const mensaje = `
+ðŸ›’ RESUMEN DEL PEDIDO â€” Verde Vida Vivero
+${'â•'.repeat(45)}
+
+${itemsList}
+${!envioGratis ? `  â€¢ EnvÃ­o estÃ¡ndar = ${envio.toLocaleString('es-AR')}` : '  â€¢ EnvÃ­o: Â¡GRATIS! ðŸŽ‰'}
+
+${'â”€'.repeat(45)}
+ðŸ’° TOTAL: ${total.toLocaleString('es-AR')}
+${'â•'.repeat(45)}
+
+âš™ï¸ PASOS PARA ACTIVAR MERCADO PAGO:
+
+1. ObtenÃ© tus credenciales en:
+   mercadopago.com.ar/developers
+
+2. ReemplazÃ¡ 'YOUR_PUBLIC_KEY' en js/mercadopago.js
+
+3. ConfigurÃ¡ un backend con el endpoint
+   POST /create_preference
+
+4. ActualizÃ¡ BACKEND_URL con la URL de tu servidor
+
+ðŸ“– DocumentaciÃ³n completa:
+   mercadopago.com.ar/developers/es/docs
+    `.trim();
+
+    alert(mensaje);
+}
+
+// ==================== INICIALIZAR MERCADO PAGO ====================
+
+/**
+ * Inicializa el SDK de Mercado Pago.
+ * Llamar esta funciÃ³n cuando la pÃ¡gina cargue si querÃ©s
+ * usar el Checkout Pro embebido (Brick).
+ */
+function initMercadoPago() {
+    if (MP_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+        console.info(
+            '%cðŸŒ¿ Verde Vida Vivero â€” Mercado Pago',
+            'color: #2d6a3e; font-size: 14px; font-weight: bold;',
+            '\n\nPara activar los pagos, configurÃ¡ tu PUBLIC_KEY en js/mercadopago.js',
+            '\nMÃ¡s info: https://www.mercadopago.com.ar/developers/es/docs'
+        );
+        return null;
+    }
+
+    if (typeof MercadoPago === 'undefined') {
+        console.warn('SDK de Mercado Pago no cargado. VerificÃ¡ el script en el HTML.');
+        return null;
+    }
+
+    return new MercadoPago(MP_PUBLIC_KEY, { locale: 'es-AR' });
+}
+
+// Intentar inicializar al cargar
+initMercadoPago();
+
+// ==================== NOTIFICACIÃ“N TOAST ====================
+
+function showToast(message) {
+    // Remover toast anterior si existe
+    const existingToast = document.querySelector('.toast');
+    if (existingToast) existingToast.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+    document.body.appendChild(toast);
+
+    // Mostrar con animaciÃ³n
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+
+    // Ocultar despuÃ©s de 3 segundos
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 400);
+    }, 3000);
+}
+
+// ==================== MENÃš MÃ“VIL ====================
+
+function toggleMobileMenu() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+}
+
+// ==================== EFECTOS DE SCROLL ====================
+
+function initScrollEffects() {
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+
+        // Navbar scrolled
+        if (scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        // BotÃ³n scroll top
+        if (scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+
+        // Resaltar nav activo segÃºn secciÃ³n
+        updateActiveNavLink();
+    });
+}
+
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// ==================== FILTRO DE PRODUCTOS ====================
+
+function initFilterButtons() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+
+            // Actualizar botÃ³n activo
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Filtrar productos con animaciÃ³n
+            productCards.forEach(card => {
+                const category = card.dataset.category;
+
+                if (filter === 'todas' || category === filter) {
+                    card.classList.remove('hidden');
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
+// ==================== INTERSECTION OBSERVER (Animaciones al scroll) ====================
+
+function initIntersectionObserver() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observar las secciones para animarlas al entrar en el viewport
+    document.querySelectorAll('.benefit-card, .care-card, .offer-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// ==================== FORMULARIO DE CONTACTO ====================
+
+function handleContactForm(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    // En un sitio real, acÃ¡ enviarÃ­as los datos al servidor
+    console.log('Datos del formulario:', data);
+
+    showToast('Â¡Mensaje enviado! Te responderemos pronto ðŸŒ¿');
+    e.target.reset();
+}
+
+// ==================== SMOOTH SCROLL PARA LINKS INTERNOS ====================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offset = 80; // Altura del navbar
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>
