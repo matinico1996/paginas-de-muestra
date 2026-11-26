@@ -188,7 +188,7 @@ const PRODUCTOS = [
     descripcion: 'Lana merino extra suave. Tejido artesanal.',
     precio: 19500,
     categoria: 'accesorios',
-    icono: 'fa-solid fa-scarf',
+    icono: 'fa-solid fa-snowflake',
     colorBg: 'linear-gradient(135deg, #B76E79, #8f545d)',
     badge: null
   }
@@ -598,7 +598,7 @@ function inicializarMercadoPago() {
     console.warn(
       'El SDK de Mercado Pago no está cargado. ' +
       'Asegurate de incluir el script en tu HTML: ' +
-      '<script src="https://sdk.mercadopago.com/js/v2"></script>'
+      '<script src="https://sdk.mercadopago.com/js/v2"><\/script>'
     );
     return null;
   }

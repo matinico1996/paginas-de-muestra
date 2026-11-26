@@ -415,7 +415,7 @@ async function createPreference() {
 
 /**
  * Inicializa el SDK de Mercado Pago y redirige al checkout.
- * Requiere que el SDK esté cargado: <script src="https://sdk.mercadopago.com/js/v2"></script>
+ * Requiere que el SDK esté cargado desde: https://sdk.mercadopago.com/js/v2
  */
 function redirectToCheckout(preferenceId) {
     // Verificar que el SDK de Mercado Pago esté cargado
